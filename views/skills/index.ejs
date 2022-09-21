@@ -9,13 +9,13 @@
 <body>
   <h1>Express Skills</h1>
   <ul>
-    <% skills.foreach(skill => { %>
+    <% skills.forEach(skill => { %>
       <li>
         <%= skill.text %>
         -
         <%= skill.skilled ? 'Yes' : 'No' %>
       </li>
-    }) 
+   <% }) %>
   </ul>
 </body>
 </html>
