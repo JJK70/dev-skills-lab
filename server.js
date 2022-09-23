@@ -22,7 +22,6 @@ app.set(
 app.set('view engine', 'ejs')
 
 app.use(function(req, res, next) {
-  console.log('Hello SeI')
   req.time = new Date().toLocaleTimeString()
   next()
 })
@@ -42,10 +41,10 @@ app.use(methodOverride('_method'))
 app.use('/', indexRouter)
 app.use('/skills', skillsRouter)
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404))
-})
+// // catch 404 and forward to error handler
+// app.use(function (req, res, next) {
+//   next(createError(404))
+// })
 
 // error handler
 app.use(function (err, req, res, next) {
